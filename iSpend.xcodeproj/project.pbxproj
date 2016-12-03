@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		85301CE81DF2F06100FA159A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301CE71DF2F06100FA159A /* AppDelegate.swift */; };
-		85301CEA1DF2F06100FA159A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301CE91DF2F06100FA159A /* ViewController.swift */; };
 		85301CED1DF2F06100FA159A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85301CEB1DF2F06100FA159A /* Main.storyboard */; };
 		85301CF01DF2F06100FA159A /* iSpend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85301CEE1DF2F06100FA159A /* iSpend.xcdatamodeld */; };
 		85301CF21DF2F06100FA159A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85301CF11DF2F06100FA159A /* Assets.xcassets */; };
 		85301CF51DF2F06100FA159A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85301CF31DF2F06100FA159A /* LaunchScreen.storyboard */; };
 		85301D001DF2F06100FA159A /* iSpendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301CFF1DF2F06100FA159A /* iSpendTests.swift */; };
+		85301D0B1DF2F0D800FA159A /* PurchaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301D0A1DF2F0D800FA159A /* PurchaseTableViewController.swift */; };
+		85301D0D1DF2F15D00FA159A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,6 @@
 /* Begin PBXFileReference section */
 		85301CE41DF2F06100FA159A /* iSpend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85301CE71DF2F06100FA159A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85301CE91DF2F06100FA159A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85301CEC1DF2F06100FA159A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85301CEF1DF2F06100FA159A /* iSpend.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSpend.xcdatamodel; sourceTree = "<group>"; };
 		85301CF11DF2F06100FA159A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		85301CFB1DF2F06100FA159A /* iSpendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85301CFF1DF2F06100FA159A /* iSpendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpendTests.swift; sourceTree = "<group>"; };
 		85301D011DF2F06100FA159A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85301D0A1DF2F0D800FA159A /* PurchaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewController.swift; sourceTree = "<group>"; };
+		85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				85301CE71DF2F06100FA159A /* AppDelegate.swift */,
-				85301CE91DF2F06100FA159A /* ViewController.swift */,
 				85301CEB1DF2F06100FA159A /* Main.storyboard */,
+				85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */,
+				85301D0A1DF2F0D800FA159A /* PurchaseTableViewController.swift */,
 				85301CF11DF2F06100FA159A /* Assets.xcassets */,
 				85301CF31DF2F06100FA159A /* LaunchScreen.storyboard */,
 				85301CF61DF2F06100FA159A /* Info.plist */,
@@ -204,9 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85301CEA1DF2F06100FA159A /* ViewController.swift in Sources */,
 				85301CF01DF2F06100FA159A /* iSpend.xcdatamodeld in Sources */,
 				85301CE81DF2F06100FA159A /* AppDelegate.swift in Sources */,
+				85301D0B1DF2F0D800FA159A /* PurchaseTableViewController.swift in Sources */,
+				85301D0D1DF2F15D00FA159A /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
