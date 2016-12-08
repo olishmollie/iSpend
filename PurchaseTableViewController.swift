@@ -43,6 +43,7 @@ class PurchaseTableViewController: UITableViewController {
         purchase.amount = Double(amount)!
         purchase.date = date.timeIntervalSinceReferenceDate
         DataController.sharedInstance.saveContext()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func validate(_ sender: UITextField) {

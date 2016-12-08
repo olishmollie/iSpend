@@ -80,6 +80,8 @@ extension PurchasesViewController: NSFetchedResultsControllerDelegate {
         switch type {
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .automatic)
+            case .insert:
+                tableView.insertRows(at: [newIndexPath!], with: .automatic)
             default: return
         }
     }
