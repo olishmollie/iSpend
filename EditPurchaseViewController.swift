@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PurchaseTableViewController: UITableViewController {
+class EditPurchaseViewController: UITableViewController {
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -16,9 +16,15 @@ class PurchaseTableViewController: UITableViewController {
     @IBOutlet weak var amountField: UITextField!
     
     let context = DataController.sharedInstance.persistentContainer.viewContext
+    var purchase: Purchase?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let purchase = purchase {
+            datePicker.date = Date(timeIntervalSinceReferenceDate: purchase.date)
+            nameField.text = purchase.name
+            amountField.text = String(purchase.amount)
+        }
         toggleSaveButton()
     }
 
@@ -31,7 +37,7 @@ class PurchaseTableViewController: UITableViewController {
     }
 
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissViewController()
     }
     
     @IBAction func save(_ sender: Any) {
@@ -43,11 +49,20 @@ class PurchaseTableViewController: UITableViewController {
         purchase.amount = Double(amount)!
         purchase.date = date.timeIntervalSinceReferenceDate
         DataController.sharedInstance.saveContext()
-        dismiss(animated: true, completion: nil)
+        dismissViewController()
     }
     
     @IBAction func validate(_ sender: UITextField) {
         toggleSaveButton()
+    }
+    
+    func dismissViewController() {
+        if self.presentingViewController != nil {
+            dismiss(animated: true, completion: nil)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     func toggleSaveButton() {
