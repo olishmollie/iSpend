@@ -16,6 +16,7 @@
 		85301D0D1DF2F15D00FA159A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */; };
 		85A4365E1DF3515400B4FEDD /* EditPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A4365D1DF3515400B4FEDD /* EditPurchaseViewController.swift */; };
 		85A436601DF3756000B4FEDD /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A4365F1DF3756000B4FEDD /* PurchasesViewController.swift */; };
+		F46A40E51F93205E00841EA0 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A40E41F93205E00841EA0 /* DateFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		85A4365D1DF3515400B4FEDD /* EditPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditPurchaseViewController.swift; path = ../EditPurchaseViewController.swift; sourceTree = "<group>"; };
 		85A4365F1DF3756000B4FEDD /* PurchasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasesViewController.swift; sourceTree = "<group>"; };
+		F46A40E41F93205E00841EA0 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				85301CF31DF2F06100FA159A /* LaunchScreen.storyboard */,
 				85301CF61DF2F06100FA159A /* Info.plist */,
 				85301CEE1DF2F06100FA159A /* iSpend.xcdatamodeld */,
+				F46A40E41F93205E00841EA0 /* DateFormatting.swift */,
 			);
 			path = iSpend;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				85301CE81DF2F06100FA159A /* AppDelegate.swift in Sources */,
 				85A436601DF3756000B4FEDD /* PurchasesViewController.swift in Sources */,
 				85A4365E1DF3515400B4FEDD /* EditPurchaseViewController.swift in Sources */,
+				F46A40E51F93205E00841EA0 /* DateFormatting.swift in Sources */,
 				85301D0D1DF2F15D00FA159A /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

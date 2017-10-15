@@ -21,9 +21,12 @@ class PurchasesViewController: UIViewController, UITableViewDataSource, UITableV
     }()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DateFormatting.set(dateStyle: .short, timeStyle: .none)
+        dateLabel.text = DateFormatting.formatter.string(from: Date())
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
