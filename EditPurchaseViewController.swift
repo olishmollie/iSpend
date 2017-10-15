@@ -45,16 +45,25 @@ class EditPurchaseViewController: UITableViewController {
         let name = nameField.text!
         let amount = amountField.text!
         let date = datePicker.date
-        let purchase = Purchase(context: context)
-        purchase.name = name
-        purchase.amount = Double(amount)!
-        purchase.date = date.timeIntervalSinceReferenceDate
+        
+        if let purchase = purchase {
+            set(purchase: purchase, name: name, amount: amount, date: date)
+        } else {
+            let newPurchase = Purchase(context: context)
+            set(purchase: newPurchase, name: name, amount: amount, date: date)
+        }
         DataController.sharedInstance.saveContext()
         dismissViewController()
     }
     
     @IBAction func validate(_ sender: UITextField) {
         toggleSaveButton()
+    }
+    
+    func set(purchase: Purchase, name: String, amount: String, date: Date) {
+        purchase.name = name
+        purchase.amount = Double(amount)!
+        purchase.date = date.timeIntervalSinceReferenceDate
     }
     
     func addDoneButtonOnKeyboard() {
@@ -73,6 +82,7 @@ class EditPurchaseViewController: UITableViewController {
         self.amountField.inputAccessoryView = doneToolbar
     }
     
+    @objc
     func doneButtonAction() {
         self.amountField.resignFirstResponder()
     }
@@ -83,7 +93,6 @@ class EditPurchaseViewController: UITableViewController {
         } else {
             navigationController?.popViewController(animated: true)
         }
-        
     }
     
     func toggleSaveButton() {

@@ -82,11 +82,13 @@ extension PurchasesViewController: NSFetchedResultsControllerDelegate {
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
-            case .delete:
-                tableView.deleteRows(at: [indexPath!], with: .automatic)
-            case .insert:
-                tableView.insertRows(at: [newIndexPath!], with: .automatic)
-            default: return
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        case .update:
+            tableView.reloadRows(at: [indexPath!], with: .automatic)
+        default: return
         }
     }
     
