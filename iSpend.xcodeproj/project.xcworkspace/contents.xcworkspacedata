@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:iSpend.xcodeproj">
+      location = "group:/Users/ajbond/Projects/Swift/iSpend/iSpend/EditPurchaseViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
