@@ -71,6 +71,7 @@ class PurchasesViewController: UIViewController, UITableViewDataSource, UITableV
             let destination = segue.destination as? EditPurchaseViewController {
                 let purchase = fetchedResultsController.object(at: indexPath)
                 destination.purchase = purchase
+                tableView.deselectRow(at: indexPath, animated: false)
             }
         }
     }
