@@ -20,6 +20,7 @@ class EditPurchaseViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addDoneButtonOnKeyboard()
         if let purchase = purchase {
             datePicker.date = Date(timeIntervalSinceReferenceDate: purchase.date)
             nameField.text = purchase.name
@@ -54,6 +55,26 @@ class EditPurchaseViewController: UITableViewController {
     
     @IBAction func validate(_ sender: UITextField) {
         toggleSaveButton()
+    }
+    
+    func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle       = UIBarStyle.default
+        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.amountField.inputAccessoryView = doneToolbar
+    }
+    
+    func doneButtonAction() {
+        self.amountField.resignFirstResponder()
     }
     
     func dismissViewController() {
