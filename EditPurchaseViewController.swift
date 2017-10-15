@@ -22,6 +22,7 @@ class EditPurchaseViewController: UITableViewController {
         super.viewDidLoad()
         addDoneButtonOnKeyboard()
         if let purchase = purchase {
+            navigationItem.title = purchase.name
             datePicker.date = Date(timeIntervalSinceReferenceDate: purchase.date)
             nameField.text = purchase.name
             amountField.text = String(purchase.amount)
