@@ -78,7 +78,15 @@ class EditPurchaseViewController: UITableViewController {
 extension EditPurchaseViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(textFieldsAreValid())
         saveButton.isEnabled = textFieldsAreValid()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        let nextResponder = self.view.viewWithTag(nextTag)
+        if let nr = nextResponder {
+            nr.becomeFirstResponder()
+        }
+        return false
     }
 }
