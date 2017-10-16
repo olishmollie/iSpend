@@ -142,9 +142,6 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
-                                                    <connections>
-                                                        <action selector="validate:" destination="dxP-LN-5On" eventType="editingDidEnd" id="A0E-PS-1W8"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -167,9 +164,6 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
-                                                    <connections>
-                                                        <action selector="validate:" destination="dxP-LN-5On" eventType="editingDidEnd" id="nBH-kk-sCL"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -248,7 +242,7 @@
             </objects>
             <point key="canvasLocation" x="-727" y="197"/>
         </scene>
-        <!--Settings Controller-->
+        <!--Settings-->
         <scene sceneID="lSZ-ja-mFJ">
             <objects>
                 <tableViewController id="Jhx-gC-Ktc" customClass="SettingsController" customModule="iSpend" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,7 +260,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6Z-gR-peH">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G6Z-gR-peH" customClass="NumpadWithDoneButton" customModule="iSpend" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -284,11 +278,20 @@
                             <outlet property="delegate" destination="Jhx-gC-Ktc" id="zHz-wn-Set"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="HBX-bQ-L3L">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="V8X-jh-eqe"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9oi-nr-h5y"/>
+                    <navigationItem key="navigationItem" title="Settings" id="HBX-bQ-L3L">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="V8X-jh-eqe">
+                            <connections>
+                                <action selector="cancel:" destination="Jhx-gC-Ktc" id="v6l-m7-UTb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9oi-nr-h5y">
+                            <connections>
+                                <action selector="save:" destination="Jhx-gC-Ktc" id="eQ0-k6-lx6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="saveButton" destination="9oi-nr-h5y" id="u8Y-9R-Dog"/>
                         <outlet property="spendingLimitField" destination="G6Z-gR-peH" id="SNC-Qv-caL"/>
                     </connections>
                 </tableViewController>

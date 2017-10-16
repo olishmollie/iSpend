@@ -20,13 +20,15 @@ class EditPurchaseViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameField.delegate = self
+        amountField.delegate = self
         if let purchase = purchase {
             navigationItem.title = purchase.name
             datePicker.date = Date(timeIntervalSinceReferenceDate: purchase.date)
             nameField.text = purchase.name
             amountField.text = String(purchase.amount)
         }
-        toggleSaveButton()
+        saveButton.isEnabled = textFieldsAreValid()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,10 +58,6 @@ class EditPurchaseViewController: UITableViewController {
         dismissViewController()
     }
     
-    @IBAction func validate(_ sender: UITextField) {
-        toggleSaveButton()
-    }
-    
     func set(purchase: Purchase, name: String, amount: String, date: Date) {
         purchase.name = name
         purchase.amount = Double(amount)!
@@ -74,8 +72,16 @@ class EditPurchaseViewController: UITableViewController {
         }
     }
     
-    func toggleSaveButton() {
-        saveButton.isEnabled = (!nameField.text!.isEmpty && !amountField.text!.isEmpty)
+    func textFieldsAreValid() -> Bool {
+        return !nameField.text!.isEmpty && !amountField.text!.isEmpty
     }
     
+}
+
+extension EditPurchaseViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(textFieldsAreValid())
+        saveButton.isEnabled = textFieldsAreValid()
+    }
 }
