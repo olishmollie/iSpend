@@ -17,6 +17,9 @@
 		85A436601DF3756000B4FEDD /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A4365F1DF3756000B4FEDD /* PurchasesViewController.swift */; };
 		F46A40E51F93205E00841EA0 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A40E41F93205E00841EA0 /* DateFormatting.swift */; };
 		F49B45A61F93F19A00E42D70 /* EditPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B45A51F93F19A00E42D70 /* EditPurchaseViewController.swift */; };
+		F49B45A81F93F5F900E42D70 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B45A71F93F5F900E42D70 /* SettingsController.swift */; };
+		F49B45AA1F9464F000E42D70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B45A91F9464F000E42D70 /* Settings.swift */; };
+		F4A563931F94F07400F97BDB /* NumpadWithDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A563921F94F07400F97BDB /* NumpadWithDoneButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		85A4365F1DF3756000B4FEDD /* PurchasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasesViewController.swift; sourceTree = "<group>"; };
 		F46A40E41F93205E00841EA0 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		F49B45A51F93F19A00E42D70 /* EditPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPurchaseViewController.swift; sourceTree = "<group>"; };
+		F49B45A71F93F5F900E42D70 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		F49B45A91F9464F000E42D70 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F4A563921F94F07400F97BDB /* NumpadWithDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadWithDoneButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +93,16 @@
 			children = (
 				85301CE71DF2F06100FA159A /* AppDelegate.swift */,
 				85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */,
+				F49B45A91F9464F000E42D70 /* Settings.swift */,
 				85A4365F1DF3756000B4FEDD /* PurchasesViewController.swift */,
 				F49B45A51F93F19A00E42D70 /* EditPurchaseViewController.swift */,
+				F49B45A71F93F5F900E42D70 /* SettingsController.swift */,
 				85301CF11DF2F06100FA159A /* Assets.xcassets */,
 				85301CEB1DF2F06100FA159A /* Main.storyboard */,
 				85301CF31DF2F06100FA159A /* LaunchScreen.storyboard */,
 				85301CF61DF2F06100FA159A /* Info.plist */,
 				85301CEE1DF2F06100FA159A /* iSpend.xcdatamodeld */,
+				F4A563921F94F07400F97BDB /* NumpadWithDoneButton.swift */,
 				F46A40E41F93205E00841EA0 /* DateFormatting.swift */,
 			);
 			path = iSpend;
@@ -217,9 +226,12 @@
 			files = (
 				85301CF01DF2F06100FA159A /* iSpend.xcdatamodeld in Sources */,
 				85301CE81DF2F06100FA159A /* AppDelegate.swift in Sources */,
+				F49B45AA1F9464F000E42D70 /* Settings.swift in Sources */,
 				F49B45A61F93F19A00E42D70 /* EditPurchaseViewController.swift in Sources */,
+				F49B45A81F93F5F900E42D70 /* SettingsController.swift in Sources */,
 				85A436601DF3756000B4FEDD /* PurchasesViewController.swift in Sources */,
 				F46A40E51F93205E00841EA0 /* DateFormatting.swift in Sources */,
+				F4A563931F94F07400F97BDB /* NumpadWithDoneButton.swift in Sources */,
 				85301D0D1DF2F15D00FA159A /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
