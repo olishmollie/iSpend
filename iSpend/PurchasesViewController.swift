@@ -68,7 +68,7 @@ class PurchasesViewController: UIViewController, UITableViewDataSource, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditPurchaseSegue" {
             if let indexPath = tableView.indexPathForSelectedRow,
-            let destination = segue.destination as? EditPurchaseViewController {
+            let destination = segue.destination as? PurchaseViewController {
                 let purchase = fetchedResultsController.object(at: indexPath)
                 destination.purchase = purchase
                 tableView.deselectRow(at: indexPath, animated: false)
