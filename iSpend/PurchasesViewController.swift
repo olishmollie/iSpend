@@ -27,7 +27,8 @@ class PurchasesViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         DateFormatting.set(dateStyle: .short, timeStyle: .none)
         dateLabel.text = DateFormatting.formatter.string(from: Date())
-        Scraper(url: "https://google.com")?.sendRequest()
+        print("Sending request...")
+        Scraper(url: "https://news.ycombinator.com")?.sendRequest()
         
         
         
