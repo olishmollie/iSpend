@@ -20,6 +20,7 @@
 		F49B45A81F93F5F900E42D70 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B45A71F93F5F900E42D70 /* SettingsController.swift */; };
 		F49B45AA1F9464F000E42D70 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B45A91F9464F000E42D70 /* Settings.swift */; };
 		F4A563931F94F07400F97BDB /* NumpadWithDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A563921F94F07400F97BDB /* NumpadWithDoneButton.swift */; };
+		F4BDEDA71F95336500770630 /* Scraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDEDA61F95336500770630 /* Scraper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F49B45A71F93F5F900E42D70 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		F49B45A91F9464F000E42D70 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F4A563921F94F07400F97BDB /* NumpadWithDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadWithDoneButton.swift; sourceTree = "<group>"; };
+		F4BDEDA61F95336500770630 /* Scraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scraper.swift; path = scraper/Sources/scraper/Scraper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		85301CE61DF2F06100FA159A /* iSpend */ = {
 			isa = PBXGroup;
 			children = (
+				F4BDEDA61F95336500770630 /* Scraper.swift */,
 				85301CE71DF2F06100FA159A /* AppDelegate.swift */,
 				85301D0C1DF2F15D00FA159A /* CoreDataStack.swift */,
 				F49B45A91F9464F000E42D70 /* Settings.swift */,
@@ -228,6 +231,7 @@
 				85301CE81DF2F06100FA159A /* AppDelegate.swift in Sources */,
 				F49B45AA1F9464F000E42D70 /* Settings.swift in Sources */,
 				F49B45A61F93F19A00E42D70 /* PurchaseViewController.swift in Sources */,
+				F4BDEDA71F95336500770630 /* Scraper.swift in Sources */,
 				F49B45A81F93F5F900E42D70 /* SettingsController.swift in Sources */,
 				85A436601DF3756000B4FEDD /* PurchasesViewController.swift in Sources */,
 				F46A40E51F93205E00841EA0 /* DateFormatting.swift in Sources */,

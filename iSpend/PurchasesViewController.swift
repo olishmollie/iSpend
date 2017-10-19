@@ -27,12 +27,16 @@ class PurchasesViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         DateFormatting.set(dateStyle: .short, timeStyle: .none)
         dateLabel.text = DateFormatting.formatter.string(from: Date())
-        fetchedResultsController.delegate = self
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            print("An error occurred")
-        }
+        Scraper(url: "https://google.com")?.sendRequest()
+        
+        
+        
+//        fetchedResultsController.delegate = self
+//        do {
+//            try fetchedResultsController.performFetch()
+//        } catch {
+//            print("An error occurred")
+//        }
     }
 
     override func didReceiveMemoryWarning() {
