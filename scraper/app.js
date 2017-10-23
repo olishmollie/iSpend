@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
@@ -5,9 +6,8 @@ const Scraper = require('./scraper.js')
 const s = new Scraper(app)
 
 app.get('/', (req, res) => {
-  s.sendRequest((html) => {
-    console.log(html);
-    res.end();
+  s.sendRequest((doc) => {
+    res.end()
   })
 })
 
